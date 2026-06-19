@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://6twpcjapoo0i"]
+
+[ext_resource type="PackedScene" uid="uid://c3j4lpq1cm8qt" path="res://node_2d.tscn" id="1_os2ef"]
+
+[node name="Node2D" type="Node2D" unique_id=1663968075]
+
+[node name="wheelofdeath" parent="." unique_id=1636137289 instance=ExtResource("1_os2ef")]
+position = Vector2(540, 326)
+scale = Vector2(1.6434548, 1.6434548)
+script = null
+
+[node name="wheelofdeath2" parent="." unique_id=771074936 instance=ExtResource("1_os2ef")]
+position = Vector2(540, 326)
+scale = Vector2(3.1647975, 3.1647975)
+script = null
+
+[node name="wheelofdeath3" parent="." unique_id=358021678 instance=ExtResource("1_os2ef")]
+position = Vector2(540, 326)
+scale = Vector2(5.5684857, 5.5684857)
+script = null

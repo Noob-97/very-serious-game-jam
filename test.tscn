@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dwu4yex0kgym8"]
+
+[ext_resource type="PackedScene" uid="uid://6twpcjapoo0i" path="res://whell2.tscn" id="1_6uqi0"]
+[ext_resource type="Script" uid="uid://dkcaw51o8hmlr" path="res://SPIN.gd" id="2_ppyta"]
+[ext_resource type="PackedScene" uid="uid://cofgqrrnshw5y" path="res://player.tscn" id="3_ykrsh"]
+
+[node name="Node2D" type="Node2D" unique_id=1084861493]
+position = Vector2(0, -1)
+
+[node name="Node2D2" parent="." unique_id=1663968075 instance=ExtResource("1_6uqi0")]
+script = ExtResource("2_ppyta")
+
+[node name="Node2D" parent="." unique_id=1415329539 node_paths=PackedStringArray("text") instance=ExtResource("3_ykrsh")]
+position = Vector2(137.99998, -375)
+scale = Vector2(0.28194264, 0.2871821)
+text = NodePath("Label")
+
+[node name="Label" type="Label" parent="Node2D" unique_id=1263440728]
+offset_left = -1894.0022
+offset_top = -1131.686
+offset_right = -1693.0022
+offset_bottom = -1064.686
+theme_override_font_sizes/font_size = 48
+text = "LIFE: 100"
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=1480149549]
