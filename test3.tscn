@@ -2,29 +2,32 @@
 
 [ext_resource type="PackedScene" uid="uid://cofgqrrnshw5y" path="res://player.tscn" id="2_3du0l"]
 [ext_resource type="PackedScene" uid="uid://dhwn0tdsp18wy" path="res://Wheel3.tscn" id="3_svvfb"]
+[ext_resource type="PackedScene" uid="uid://cato3i0g8w10g" path="res://Background.tscn" id="4_8hojv"]
 [ext_resource type="PackedScene" uid="uid://c3j4lpq1cm8qt" path="res://node_2d.tscn" id="5_bqkbb"]
 
 [node name="Test3" type="Node2D" unique_id=521406567]
 
 [node name="wheelofdeath" parent="." unique_id=1636137289 instance=ExtResource("5_bqkbb")]
-position = Vector2(428, 280)
+position = Vector2(1882.0001, 818)
 rotation = 1.5707964
 rotation_speed = 35.0
 spin_direction = -1
 
 [node name="wheelofdeath2" parent="." unique_id=200143838 instance=ExtResource("5_bqkbb")]
-position = Vector2(430, 280)
+position = Vector2(1884.0001, 818)
 rotation = 3.1415927
 scale = Vector2(2.4, 2.4)
 rotation_speed = 40.0
 
 [node name="wheelofdeath3" parent="." unique_id=611877941 instance=ExtResource("3_svvfb")]
-position = Vector2(427.00037, 279)
+position = Vector2(1881.0005, 817)
 rotation = 6.2831855
 scale = Vector2(4.7, 4.7)
 rotation_speed = 30.0
 spin_direction = -1
 
 [node name="Node2D" parent="." unique_id=1415329539 instance=ExtResource("2_3du0l")]
-position = Vector2(422, 294)
+position = Vector2(1876, 831.99994)
 scale = Vector2(0.2, 0.2)
+
+[node name="CanvasLayer" parent="." unique_id=882358980 instance=ExtResource("4_8hojv")]

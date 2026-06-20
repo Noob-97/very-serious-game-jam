@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cato3i0g8w10g"]
+
+[ext_resource type="Shader" uid="uid://hoyucdviin7y" path="res://glitchbgshader.gdshader" id="1_dpw2a"]
+[ext_resource type="Texture2D" uid="uid://dnkogmb0q63jb" path="res://error bg.png" id="2_jqsg2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8xc84"]
+shader = ExtResource("1_dpw2a")
+shader_parameter/glitch_speed = 5.0
+shader_parameter/glitch_intensity = 0.02
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=882358980]
+layer = -10
+follow_viewport_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=699180261]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_8xc84")
+anchors_preset = -1
+anchor_right = 6.077257
+anchor_bottom = 7.435185
+offset_left = -3274.0
+offset_top = -1272.0
+offset_right = 566.0
+offset_bottom = 888.0
+texture = ExtResource("2_jqsg2")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
