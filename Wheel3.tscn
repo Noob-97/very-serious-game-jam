@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dhwn0tdsp18wy"]
 
 [ext_resource type="Script" uid="uid://dkcaw51o8hmlr" path="res://SPIN.gd" id="1_4dkq8"]
-[ext_resource type="Texture2D" uid="uid://mbd28176frto" path="res://icon.svg" id="2_nvrne"]
+[ext_resource type="Texture2D" uid="uid://ccyhf0kjs8tqb" path="res://Sprites/square.png" id="2_4dkq8"]
 [ext_resource type="PackedScene" uid="uid://csvwbgfsg7kfd" path="res://kill.tscn" id="3_ohk73"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
@@ -15,9 +15,10 @@ position = Vector2(-107, 0)
 scale = Vector2(0.3200003, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=4086171]
+modulate = Color(0, 0.21742246, 0.24136797, 1)
 position = Vector2(-7.6293945e-06, 156)
 scale = Vector2(2.5312498, 0.17187491)
-texture = ExtResource("2_nvrne")
+texture = ExtResource("2_4dkq8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=286673992]
 position = Vector2(2, 155)
@@ -27,9 +28,10 @@ shape = SubResource("RectangleShape2D_g4v7s")
 position = Vector2(0, -306)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=748220252]
+modulate = Color(0, 0.21742246, 0.24136797, 1)
 position = Vector2(-7.6293945e-06, 156)
 scale = Vector2(2.5312498, 0.17187491)
-texture = ExtResource("2_nvrne")
+texture = ExtResource("2_4dkq8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=608199213]
 position = Vector2(2, 155)
@@ -40,9 +42,10 @@ position = Vector2(0, 5.0000153)
 rotation = -1.5827397
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3" unique_id=1581337247]
+modulate = Color(0, 0.21742246, 0.24136797, 1)
 position = Vector2(-7.6293945e-06, 156)
 scale = Vector2(2.5312498, 0.17187491)
-texture = ExtResource("2_nvrne")
+texture = ExtResource("2_4dkq8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1412749783]
 position = Vector2(2, 155)
@@ -53,9 +56,10 @@ position = Vector2(-305.00003, 5.0000153)
 rotation = -1.5827397
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4" unique_id=1083239956]
+modulate = Color(0, 0.21742246, 0.24136797, 1)
 position = Vector2(-7.6293945e-06, 156)
 scale = Vector2(2.5312498, 0.17187491)
-texture = ExtResource("2_nvrne")
+texture = ExtResource("2_4dkq8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1179446544]
 position = Vector2(2, 155)
@@ -66,9 +70,10 @@ position = Vector2(79, 0)
 scale = Vector2(0.4400003, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5" unique_id=1357065064]
+modulate = Color(0, 0.21742246, 0.24136797, 1)
 position = Vector2(-7.6293945e-06, 156)
 scale = Vector2(2.5312498, 0.17187491)
-texture = ExtResource("2_nvrne")
+texture = ExtResource("2_4dkq8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1566331023]
 position = Vector2(2, 155)
@@ -76,28 +81,35 @@ shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="kill" parent="." unique_id=1858201397 instance=ExtResource("3_ohk73")]
 position = Vector2(143, 49)
+rotation = -1.5874223
 scale = Vector2(0.14, 0.149)
 
 [node name="kill2" parent="." unique_id=458522302 instance=ExtResource("3_ohk73")]
 position = Vector2(142, -18)
+rotation = -1.5627935
 scale = Vector2(0.14, 0.149)
 
 [node name="kill3" parent="." unique_id=1992858690 instance=ExtResource("3_ohk73")]
 position = Vector2(141, -82)
+rotation = -1.5845585
 scale = Vector2(0.14, 0.149)
 
 [node name="kill4" parent="." unique_id=221524444 instance=ExtResource("3_ohk73")]
 position = Vector2(52, -136)
+rotation = 3.130746
 scale = Vector2(0.14, 0.149)
 
 [node name="kill5" parent="." unique_id=883905724 instance=ExtResource("3_ohk73")]
 position = Vector2(-62, -136)
+rotation = 3.1388042
 scale = Vector2(0.14, 0.149)
 
 [node name="kill7" parent="." unique_id=1916654999 instance=ExtResource("3_ohk73")]
 position = Vector2(-136, -28)
+rotation = 1.5910999
 scale = Vector2(0.14, 0.149)
 
 [node name="kill8" parent="." unique_id=1253772381 instance=ExtResource("3_ohk73")]
 position = Vector2(-135, 29)
+rotation = 1.5508469
 scale = Vector2(0.14, 0.149)
