@@ -26,8 +26,17 @@ scale = Vector2(4.7, 4.7)
 rotation_speed = 30.0
 spin_direction = -1
 
-[node name="Node2D" parent="." unique_id=1415329539 instance=ExtResource("2_3du0l")]
+[node name="Node2D" parent="." unique_id=1415329539 node_paths=PackedStringArray("text") instance=ExtResource("2_3du0l")]
 position = Vector2(1876, 831.99994)
 scale = Vector2(0.2, 0.2)
+text = NodePath("Label")
+
+[node name="Label" type="Label" parent="Node2D" unique_id=1495174173]
+offset_left = -2714.9998
+offset_top = -1424.9995
+offset_right = -2349.9998
+offset_bottom = -1167.9995
+theme_override_font_sizes/font_size = 188
+text = "LIFE: "
 
 [node name="CanvasLayer" parent="." unique_id=882358980 instance=ExtResource("4_8hojv")]

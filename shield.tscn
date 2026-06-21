@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://7pr7mf0enhyj"]
+
+[ext_resource type="Script" uid="uid://cefq3jykg2wcw" path="res://shield.gd" id="1_0vxx4"]
+[ext_resource type="Texture2D" uid="uid://d0h1l0c77tr6i" path="res://Sprites/sprite_2.png" id="2_4re53"]
+[ext_resource type="Texture2D" uid="uid://ddv1r10o7pslh" path="res://Sprites/hurtshield0 (1).png" id="3_tgr6k"]
+[ext_resource type="Texture2D" uid="uid://bsq5bcisjresc" path="res://Sprites/hurtshield0 (2).png" id="4_xc41h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 7.6739097
+
+[node name="shield" type="StaticBody2D" unique_id=760688946]
+scale = Vector2(3, 3)
+script = ExtResource("1_0vxx4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1963805196]
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="3" type="Sprite2D" parent="." unique_id=1011403556]
+texture_filter = 1
+texture = ExtResource("2_4re53")
+
+[node name="2" type="Sprite2D" parent="." unique_id=970771905]
+visible = false
+texture_filter = 1
+texture = ExtResource("3_tgr6k")
+
+[node name="1" type="Sprite2D" parent="." unique_id=1175771930]
+visible = false
+texture_filter = 1
+texture = ExtResource("4_xc41h")

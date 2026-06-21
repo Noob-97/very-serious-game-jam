@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dkcaw51o8hmlr" path="res://SPIN.gd" id="1_4dkq8"]
 [ext_resource type="Texture2D" uid="uid://ccyhf0kjs8tqb" path="res://Sprites/square.png" id="2_4dkq8"]
 [ext_resource type="PackedScene" uid="uid://csvwbgfsg7kfd" path="res://kill.tscn" id="3_ohk73"]
+[ext_resource type="PackedScene" uid="uid://7pr7mf0enhyj" path="res://shield.tscn" id="4_nvrne"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(321, 20)
@@ -79,37 +80,57 @@ texture = ExtResource("2_4dkq8")
 position = Vector2(2, 155)
 shape = SubResource("RectangleShape2D_g4v7s")
 
-[node name="kill" parent="." unique_id=1858201397 instance=ExtResource("3_ohk73")]
+[node name="kill" parent="." unique_id=1858201397 groups=["kill"] instance=ExtResource("3_ohk73")]
 position = Vector2(143, 49)
 rotation = -1.5874223
 scale = Vector2(0.14, 0.149)
 
-[node name="kill2" parent="." unique_id=458522302 instance=ExtResource("3_ohk73")]
+[node name="kill2" parent="." unique_id=458522302 groups=["kill"] instance=ExtResource("3_ohk73")]
 position = Vector2(142, -18)
 rotation = -1.5627935
 scale = Vector2(0.14, 0.149)
 
-[node name="kill3" parent="." unique_id=1992858690 instance=ExtResource("3_ohk73")]
+[node name="kill3" parent="." unique_id=1992858690 groups=["kill"] instance=ExtResource("3_ohk73")]
 position = Vector2(141, -82)
 rotation = -1.5845585
 scale = Vector2(0.14, 0.149)
 
-[node name="kill4" parent="." unique_id=221524444 instance=ExtResource("3_ohk73")]
+[node name="kill4" parent="." unique_id=221524444 groups=["kill"] instance=ExtResource("3_ohk73")]
 position = Vector2(52, -136)
 rotation = 3.130746
 scale = Vector2(0.14, 0.149)
 
-[node name="kill5" parent="." unique_id=883905724 instance=ExtResource("3_ohk73")]
+[node name="kill5" parent="." unique_id=883905724 groups=["kill"] instance=ExtResource("3_ohk73")]
 position = Vector2(-62, -136)
 rotation = 3.1388042
 scale = Vector2(0.14, 0.149)
 
-[node name="kill7" parent="." unique_id=1916654999 instance=ExtResource("3_ohk73")]
+[node name="kill7" parent="." unique_id=1916654999 groups=["kill"] instance=ExtResource("3_ohk73")]
 position = Vector2(-136, -28)
 rotation = 1.5910999
 scale = Vector2(0.14, 0.149)
 
-[node name="kill8" parent="." unique_id=1253772381 instance=ExtResource("3_ohk73")]
+[node name="kill8" parent="." unique_id=1253772381 groups=["kill"] instance=ExtResource("3_ohk73")]
 position = Vector2(-135, 29)
 rotation = 1.5508469
 scale = Vector2(0.14, 0.149)
+
+[node name="OPENER" type="StaticBody2D" parent="." unique_id=1792052518]
+position = Vector2(-24, 0)
+scale = Vector2(0.20000197, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="OPENER" unique_id=2064422404]
+modulate = Color(1.504086e-08, 0.09962485, 0.11530576, 1)
+position = Vector2(-7.6293945e-06, 156)
+scale = Vector2(2.5312498, 0.17187491)
+texture = ExtResource("2_4dkq8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OPENER" unique_id=296121537]
+position = Vector2(2, 155)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="shield" parent="." unique_id=760688946 node_paths=PackedStringArray("OPENER") groups=["shield"] instance=ExtResource("4_nvrne")]
+position = Vector2(1.1920929e-07, -108)
+rotation = 3.1258805
+scale = Vector2(0.714267, 0.714267)
+OPENER = NodePath("../OPENER")

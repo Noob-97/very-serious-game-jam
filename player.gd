@@ -3,7 +3,8 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
 @export var text: Label
-var life = 5
+var life = 20
+var shieldbroken = false
 
 var invincible_timer: float = 0.0
 
@@ -47,4 +48,13 @@ func _physics_process(delta: float) -> void:
 					
 				if life <= 0:
 					get_tree().reload_current_scene()
+			
+			# SHIELD
+			if collider.is_in_group("shield"):
+				collider.hit()
+				if collider.shield_life == 0:
+					shieldbroken = true
+					collider.OPENER.queue_free()
+					collider.queue_free()
+				
 	
