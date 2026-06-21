@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bx40csv71pguv"]
 
 [ext_resource type="PackedScene" uid="uid://cofgqrrnshw5y" path="res://player.tscn" id="2_3du0l"]
+[ext_resource type="PackedScene" uid="uid://b35yxmhicpxuj" path="res://Wheel4.tscn" id="3_qj7nf"]
 [ext_resource type="PackedScene" uid="uid://dhwn0tdsp18wy" path="res://Wheel3.tscn" id="3_svvfb"]
 [ext_resource type="PackedScene" uid="uid://cato3i0g8w10g" path="res://Background.tscn" id="4_8hojv"]
 [ext_resource type="PackedScene" uid="uid://c3j4lpq1cm8qt" path="res://node_2d.tscn" id="5_bqkbb"]
@@ -24,6 +25,13 @@ position = Vector2(1881.0005, 817)
 rotation = 6.2831855
 scale = Vector2(4.7, 4.7)
 rotation_speed = 30.0
+spin_direction = -1
+
+[node name="wheelofdeath4" parent="." unique_id=1454160587 instance=ExtResource("3_qj7nf")]
+position = Vector2(1877, 832.99994)
+rotation = 4.712389
+scale = Vector2(8.8, 8.8)
+rotation_speed = 21.0
 spin_direction = -1
 
 [node name="Node2D" parent="." unique_id=1415329539 node_paths=PackedStringArray("text") instance=ExtResource("2_3du0l")]

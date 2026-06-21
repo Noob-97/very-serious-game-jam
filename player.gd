@@ -3,7 +3,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
 @export var text: Label
-var life = 20
+var life = 35
 var shieldbroken = false
 
 var invincible_timer: float = 0.0
