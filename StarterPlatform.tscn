@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://biyjtldv8tp05"]
+
+[ext_resource type="Script" uid="uid://b40jgs3y310ur" path="res://Disappearing starter platform..gd" id="1_h5n3n"]
+[ext_resource type="Texture2D" uid="uid://ccyhf0kjs8tqb" path="res://Sprites/square.png" id="2_7r8nm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u0ya7"]
+size = Vector2(28, 4)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1434404487]
+script = ExtResource("1_h5n3n")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1011450784]
+modulate = Color(0, 0.21742246, 0.24136797, 1)
+position = Vector2(4.7683716e-07, 0)
+scale = Vector2(0.2153242, 0.0293125)
+texture = ExtResource("2_7r8nm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1749834500]
+shape = SubResource("RectangleShape2D_u0ya7")

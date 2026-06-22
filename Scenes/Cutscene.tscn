@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://beu7j3tamk21u"]
+
+[ext_resource type="Script" uid="uid://ervtvul6cy2" path="res://Scenes/cutscene.gd" id="1_1srds"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_rcnu8"]
+resource_local_to_scene = true
+resource_name = "CutsceneV1RUS"
+file = "res://CutsceneV1RUS.ogv"
+
+[node name="Control" type="Control" unique_id=361787160]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_1srds")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=183910107]
+layout_mode = 1
+offset_left = -13.0
+offset_top = -16.0
+offset_right = 1835.0
+offset_bottom = 1064.0
+scale = Vector2(0.64, 0.64)
+stream = SubResource("VideoStreamTheora_rcnu8")
+autoplay = true

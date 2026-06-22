@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cato3i0g8w10g" path="res://Scenes/Background.tscn" id="4_8hojv"]
 [ext_resource type="PackedScene" uid="uid://c3j4lpq1cm8qt" path="res://Scenes/Testing/node_2d.tscn" id="5_bqkbb"]
 [ext_resource type="PackedScene" uid="uid://dkerpte1krpwj" path="res://Scenes/Testing/Wheel5.tscn" id="6_3du0l"]
+[ext_resource type="PackedScene" uid="uid://biyjtldv8tp05" path="res://StarterPlatform.tscn" id="7_0alrg"]
 
 [node name="Test3" type="Node2D" unique_id=521406567]
 
@@ -55,3 +56,7 @@ position = Vector2(1875, 824)
 rotation = -1.5707964
 scale = Vector2(15.7, 15.7)
 rotation_speed = 8.0
+
+[node name="StaticBody2D" parent="." unique_id=1434404487 instance=ExtResource("7_0alrg")]
+position = Vector2(1875, 861)
+scale = Vector2(2, 2)
