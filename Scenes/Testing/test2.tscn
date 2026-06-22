@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bjfoawfm2myyq"]
 
-[ext_resource type="PackedScene" uid="uid://di5kjh8liau3l" path="res://spinning_square.tscn" id="1_qih2i"]
-[ext_resource type="PackedScene" uid="uid://c51hwigwv8af6" path="res://player2.tscn" id="2_sth5e"]
+[ext_resource type="PackedScene" uid="uid://di5kjh8liau3l" path="res://Scenes/Testing/spinning_square.tscn" id="1_qih2i"]
+[ext_resource type="PackedScene" uid="uid://c51hwigwv8af6" path="res://Scenes/Testing/player2.tscn" id="2_sth5e"]
 
 [node name="Node2D" type="Node2D" unique_id=1687938729]
 

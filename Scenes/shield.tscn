@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://7pr7mf0enhyj"]
 
-[ext_resource type="Script" uid="uid://cefq3jykg2wcw" path="res://shield.gd" id="1_0vxx4"]
+[ext_resource type="Script" uid="uid://cefq3jykg2wcw" path="res://Scripts/shield.gd" id="1_0vxx4"]
 [ext_resource type="Texture2D" uid="uid://d0h1l0c77tr6i" path="res://Sprites/sprite_2.png" id="2_4re53"]
 [ext_resource type="Texture2D" uid="uid://ddv1r10o7pslh" path="res://Sprites/hurtshield0 (1).png" id="3_tgr6k"]
 [ext_resource type="Texture2D" uid="uid://bsq5bcisjresc" path="res://Sprites/hurtshield0 (2).png" id="4_xc41h"]

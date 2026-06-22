@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cato3i0g8w10g"]
 
-[ext_resource type="Shader" uid="uid://hoyucdviin7y" path="res://glitchbgshader.gdshader" id="1_dpw2a"]
-[ext_resource type="Texture2D" uid="uid://dnkogmb0q63jb" path="res://error bg.png" id="2_jqsg2"]
+[ext_resource type="Shader" uid="uid://hoyucdviin7y" path="res://Shaders/glitchbgshader.gdshader" id="1_dpw2a"]
+[ext_resource type="Texture2D" uid="uid://dnkogmb0q63jb" path="res://Sprites/error bg.png" id="2_jqsg2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8xc84"]
 shader = ExtResource("1_dpw2a")

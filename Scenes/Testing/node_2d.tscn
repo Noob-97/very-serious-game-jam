@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://c3j4lpq1cm8qt"]
 
-[ext_resource type="Script" uid="uid://dkcaw51o8hmlr" path="res://SPIN.gd" id="1_0e48y"]
-[ext_resource type="Texture2D" uid="uid://ccyhf0kjs8tqb" path="res://Sprites/square.png" id="2_epypp"]
-[ext_resource type="PackedScene" uid="uid://csvwbgfsg7kfd" path="res://kill.tscn" id="3_epypp"]
-[ext_resource type="PackedScene" uid="uid://7pr7mf0enhyj" path="res://shield.tscn" id="4_0hol4"]
+[ext_resource type="Script" uid="uid://dkcaw51o8hmlr" path="res://Scripts/SPIN.gd" id="1_b8wod"]
+[ext_resource type="Texture2D" uid="uid://ccyhf0kjs8tqb" path="res://Sprites/square.png" id="2_5vd31"]
+[ext_resource type="PackedScene" uid="uid://csvwbgfsg7kfd" path="res://Scenes/kill.tscn" id="3_q7oqy"]
+[ext_resource type="PackedScene" uid="uid://7pr7mf0enhyj" path="res://Scenes/shield.tscn" id="4_ma4pr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(321, 20)
 
 [node name="wheelofdeath" type="Node2D" unique_id=1636137289]
-script = ExtResource("1_0e48y")
+script = ExtResource("1_b8wod")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1285641590]
 position = Vector2(-107, 0)
@@ -19,7 +19,7 @@ scale = Vector2(0.3200003, 1)
 modulate = Color(7.412136e-06, 0.61870885, 0.8209848, 1)
 position = Vector2(-7.6293945e-06, 156)
 scale = Vector2(2.5312498, 0.17187491)
-texture = ExtResource("2_epypp")
+texture = ExtResource("2_5vd31")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=286673992]
 position = Vector2(2, 155)
@@ -32,7 +32,7 @@ position = Vector2(0, -306)
 modulate = Color(7.412136e-06, 0.61870885, 0.8209848, 1)
 position = Vector2(-7.6293945e-06, 156)
 scale = Vector2(2.5312498, 0.17187491)
-texture = ExtResource("2_epypp")
+texture = ExtResource("2_5vd31")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=608199213]
 position = Vector2(2, 155)
@@ -46,7 +46,7 @@ rotation = -1.5827397
 modulate = Color(7.412136e-06, 0.61870885, 0.8209848, 1)
 position = Vector2(-7.6293945e-06, 156)
 scale = Vector2(2.5312498, 0.17187491)
-texture = ExtResource("2_epypp")
+texture = ExtResource("2_5vd31")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1412749783]
 position = Vector2(2, 155)
@@ -60,7 +60,7 @@ rotation = -1.5827397
 modulate = Color(7.412136e-06, 0.61870885, 0.8209848, 1)
 position = Vector2(-7.6293945e-06, 156)
 scale = Vector2(2.5312498, 0.17187491)
-texture = ExtResource("2_epypp")
+texture = ExtResource("2_5vd31")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1179446544]
 position = Vector2(2, 155)
@@ -74,42 +74,42 @@ scale = Vector2(0.4400003, 1)
 modulate = Color(7.412136e-06, 0.61870885, 0.8209848, 1)
 position = Vector2(-7.6293945e-06, 156)
 scale = Vector2(2.5312498, 0.17187491)
-texture = ExtResource("2_epypp")
+texture = ExtResource("2_5vd31")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1566331023]
 position = Vector2(2, 155)
 shape = SubResource("RectangleShape2D_g4v7s")
 
-[node name="kill" parent="." unique_id=1858201397 groups=["kill"] instance=ExtResource("3_epypp")]
+[node name="kill" parent="." unique_id=1858201397 groups=["kill"] instance=ExtResource("3_q7oqy")]
 position = Vector2(137, 49)
 rotation = -1.5858892
 scale = Vector2(0.43999755, 0.46922907)
 
-[node name="kill2" parent="." unique_id=320358999 groups=["kill"] instance=ExtResource("3_epypp")]
+[node name="kill2" parent="." unique_id=320358999 groups=["kill"] instance=ExtResource("3_q7oqy")]
 position = Vector2(135, -63)
 rotation = -1.5879254
 scale = Vector2(0.43999755, 0.46922907)
 
-[node name="kill3" parent="." unique_id=1668671024 groups=["kill"] instance=ExtResource("3_epypp")]
+[node name="kill3" parent="." unique_id=1668671024 groups=["kill"] instance=ExtResource("3_q7oqy")]
 position = Vector2(19, -131)
 rotation = 3.1318069
 scale = Vector2(0.43999755, 0.46922907)
 
-[node name="kill4" parent="." unique_id=702853859 groups=["kill"] instance=ExtResource("3_epypp")]
+[node name="kill4" parent="." unique_id=702853859 groups=["kill"] instance=ExtResource("3_q7oqy")]
 position = Vector2(-132, -82)
 rotation = 1.596159
 scale = Vector2(0.43999755, 0.46922907)
 
-[node name="kill5" parent="." unique_id=505930990 groups=["kill"] instance=ExtResource("3_epypp")]
+[node name="kill5" parent="." unique_id=505930990 groups=["kill"] instance=ExtResource("3_q7oqy")]
 position = Vector2(-131, 64)
 rotation = 1.5765442
 scale = Vector2(0.43999755, 0.46922907)
 
-[node name="kill6" parent="." unique_id=262099822 groups=["kill"] instance=ExtResource("3_epypp")]
+[node name="kill6" parent="." unique_id=262099822 groups=["kill"] instance=ExtResource("3_q7oqy")]
 position = Vector2(62, 137)
 scale = Vector2(0.43999755, 0.46922907)
 
-[node name="shield" parent="." unique_id=760688946 node_paths=PackedStringArray("OPENER") groups=["shield"] instance=ExtResource("4_0hol4")]
+[node name="shield" parent="." unique_id=760688946 node_paths=PackedStringArray("OPENER") groups=["shield"] instance=ExtResource("4_ma4pr")]
 position = Vector2(-75, 93)
 scale = Vector2(1.1962821, 1.1962821)
 OPENER = NodePath("../OPENER")
@@ -122,7 +122,7 @@ scale = Vector2(0.4400003, 0.99730563)
 modulate = Color(0, 0.2543294, 0.2860765, 1)
 position = Vector2(-7.6293945e-06, 156)
 scale = Vector2(1.0766994, 0.17187491)
-texture = ExtResource("2_epypp")
+texture = ExtResource("2_5vd31")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OPENER" unique_id=378767075]
 position = Vector2(2, 155)

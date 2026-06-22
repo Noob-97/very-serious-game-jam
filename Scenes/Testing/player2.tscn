@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c51hwigwv8af6"]
 
-[ext_resource type="Script" uid="uid://dn3wl2oicm6gw" path="res://PLAYERALT.gd" id="1_rihsh"]
-[ext_resource type="Texture2D" uid="uid://bb583brf11o0s" path="res://square.png" id="2_vop8p"]
+[ext_resource type="Script" uid="uid://dn3wl2oicm6gw" path="res://Scripts/Testing/PLAYERALT.gd" id="1_rihsh"]
+[ext_resource type="Texture2D" path="res://square.png" id="2_vop8p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 

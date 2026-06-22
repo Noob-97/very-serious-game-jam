@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dwu4yex0kgym8"]
 
-[ext_resource type="PackedScene" uid="uid://6twpcjapoo0i" path="res://whell2.tscn" id="1_6uqi0"]
-[ext_resource type="Script" uid="uid://dkcaw51o8hmlr" path="res://SPIN.gd" id="2_ppyta"]
+[ext_resource type="PackedScene" uid="uid://6twpcjapoo0i" path="res://Scenes/Testing/whell2.tscn" id="1_6uqi0"]
+[ext_resource type="Script" uid="uid://dkcaw51o8hmlr" path="res://Scripts/SPIN.gd" id="2_ppyta"]
 
 [node name="Node2D" type="Node2D" unique_id=1084861493]
 position = Vector2(0, -1)

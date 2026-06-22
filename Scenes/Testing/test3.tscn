@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bx40csv71pguv"]
 
-[ext_resource type="PackedScene" uid="uid://cofgqrrnshw5y" path="res://player.tscn" id="2_3du0l"]
-[ext_resource type="PackedScene" uid="uid://b35yxmhicpxuj" path="res://Wheel4.tscn" id="3_qj7nf"]
-[ext_resource type="PackedScene" uid="uid://dhwn0tdsp18wy" path="res://Wheel3.tscn" id="3_svvfb"]
-[ext_resource type="PackedScene" uid="uid://cato3i0g8w10g" path="res://Background.tscn" id="4_8hojv"]
-[ext_resource type="PackedScene" uid="uid://c3j4lpq1cm8qt" path="res://node_2d.tscn" id="5_bqkbb"]
-[ext_resource type="PackedScene" uid="uid://dkerpte1krpwj" path="res://Wheel5.tscn" id="6_3du0l"]
+[ext_resource type="PackedScene" uid="uid://cofgqrrnshw5y" path="res://Scenes/player.tscn" id="2_3du0l"]
+[ext_resource type="PackedScene" uid="uid://b35yxmhicpxuj" path="res://Scenes/Testing/Wheel4.tscn" id="3_qj7nf"]
+[ext_resource type="PackedScene" uid="uid://dhwn0tdsp18wy" path="res://Scenes/Testing/Wheel3.tscn" id="3_svvfb"]
+[ext_resource type="PackedScene" uid="uid://cato3i0g8w10g" path="res://Scenes/Background.tscn" id="4_8hojv"]
+[ext_resource type="PackedScene" uid="uid://c3j4lpq1cm8qt" path="res://Scenes/Testing/node_2d.tscn" id="5_bqkbb"]
+[ext_resource type="PackedScene" uid="uid://dkerpte1krpwj" path="res://Scenes/Testing/Wheel5.tscn" id="6_3du0l"]
 
 [node name="Test3" type="Node2D" unique_id=521406567]
 

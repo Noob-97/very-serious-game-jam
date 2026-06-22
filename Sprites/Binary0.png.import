@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cs0etai3x6xs1"
-path="res://.godot/imported/Binary0.png-89ff5273ece488ded324250be8d6d552.ctex"
+path="res://.godot/imported/Binary0.png-158749a0ae6c57e74f7fa79b0ef7fea8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Binary0.png"
-dest_files=["res://.godot/imported/Binary0.png-89ff5273ece488ded324250be8d6d552.ctex"]
+source_file="res://Sprites/Binary0.png"
+dest_files=["res://.godot/imported/Binary0.png-158749a0ae6c57e74f7fa79b0ef7fea8.ctex"]
 
 [params]
 

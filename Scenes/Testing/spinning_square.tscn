@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://di5kjh8liau3l"]
 
-[ext_resource type="Script" uid="uid://dkcaw51o8hmlr" path="res://SPIN.gd" id="1_u5jqc"]
-[ext_resource type="Texture2D" uid="uid://mbd28176frto" path="res://icon.svg" id="2_hjmub"]
+[ext_resource type="Script" uid="uid://dkcaw51o8hmlr" path="res://Scripts/SPIN.gd" id="1_a0tn4"]
+[ext_resource type="Texture2D" uid="uid://mbd28176frto" path="res://icon.svg" id="2_cf2dd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(321, 20)
 
 [node name="spinningsquare" type="Node2D" unique_id=1636137289]
-script = ExtResource("1_u5jqc")
+script = ExtResource("1_a0tn4")
 
 [node name="kill" type="StaticBody2D" parent="." unique_id=1285641590]
 position = Vector2(-96, 0)
@@ -16,7 +16,7 @@ scale = Vector2(0.28000045, 1)
 [node name="Sprite2D" type="Sprite2D" parent="kill" unique_id=4086171]
 position = Vector2(-7.6293945e-06, 156)
 scale = Vector2(2.5312498, 0.17187491)
-texture = ExtResource("2_hjmub")
+texture = ExtResource("2_cf2dd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="kill" unique_id=286673992]
 position = Vector2(2, 155)
@@ -28,7 +28,7 @@ position = Vector2(0, -306)
 [node name="Sprite2D" type="Sprite2D" parent="kill2" unique_id=748220252]
 position = Vector2(-7.6293945e-06, 156)
 scale = Vector2(2.5312498, 0.17187491)
-texture = ExtResource("2_hjmub")
+texture = ExtResource("2_cf2dd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="kill2" unique_id=608199213]
 position = Vector2(2, 155)
@@ -41,7 +41,7 @@ rotation = -1.5827397
 [node name="Sprite2D" type="Sprite2D" parent="kill3" unique_id=1581337247]
 position = Vector2(-7.6293945e-06, 156)
 scale = Vector2(2.5312498, 0.17187491)
-texture = ExtResource("2_hjmub")
+texture = ExtResource("2_cf2dd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="kill3" unique_id=1412749783]
 position = Vector2(2, 155)
@@ -54,7 +54,7 @@ rotation = -1.5827397
 [node name="Sprite2D" type="Sprite2D" parent="kill4" unique_id=1083239956]
 position = Vector2(-7.6293945e-06, 156)
 scale = Vector2(2.5312498, 0.17187491)
-texture = ExtResource("2_hjmub")
+texture = ExtResource("2_cf2dd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="kill4" unique_id=1179446544]
 position = Vector2(2, 155)
@@ -67,7 +67,7 @@ scale = Vector2(0.28000045, 1)
 [node name="Sprite2D" type="Sprite2D" parent="kill5" unique_id=1737857817]
 position = Vector2(-7.6293945e-06, 156)
 scale = Vector2(2.5312498, 0.17187491)
-texture = ExtResource("2_hjmub")
+texture = ExtResource("2_cf2dd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="kill5" unique_id=238729576]
 position = Vector2(2, 155)
