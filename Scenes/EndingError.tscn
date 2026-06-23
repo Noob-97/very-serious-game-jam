@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c6oywfwhv24t5"]
+
+[ext_resource type="Texture2D" uid="uid://b2y4rr15ac3rg" path="res://EndingError.png" id="1_8gcuj"]
+
+[node name="Control" type="Control" unique_id=1707730362]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=15456828]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_8gcuj")
