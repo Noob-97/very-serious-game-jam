@@ -14,7 +14,7 @@ func _physics_process(delta: float):
 
 func hit():
 	if invincible_timer <= 0:
-		invincible_timer = 1.0
+		invincible_timer = 0.7
 		shield_life -= 1
 		if shield_life == 2:
 			sprite3.visible = false
