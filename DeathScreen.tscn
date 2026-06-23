@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://iv3ldegkvqe1"]
+
+[ext_resource type="VideoStream" uid="uid://dr1ruutjvqnax" path="res://DeathV1RUS.ogv" id="1_58ct5"]
+
+[node name="Control" type="Control" unique_id=1510852049]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1809566392]
+layout_mode = 0
+offset_left = -30.999998
+offset_top = -9.999999
+offset_right = 1873.0
+offset_bottom = 1070.0
+scale = Vector2(0.63, 0.63)
+stream = ExtResource("1_58ct5")
