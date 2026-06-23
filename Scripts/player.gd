@@ -48,7 +48,7 @@ func _physics_process(delta: float) -> void:
 				lives[life / 5].visible = false
 					
 				if life <= 0:
-					get_tree().reload_current_scene()
+					get_tree().change_scene_to_file("res://DeathScreen.tscn")
 			
 			# SHIELD
 			if collider.is_in_group("shield"):
