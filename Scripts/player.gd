@@ -59,3 +59,8 @@ func _physics_process(delta: float) -> void:
 					collider.queue_free()
 				
 	
+
+
+func _escaped(body: Node2D) -> void:
+	if body.name == "Player":
+		get_tree().change_scene_to_file("res://Scenes/EndingError.tscn")
