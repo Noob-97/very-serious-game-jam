@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://c3j4lpq1cm8qt"]
 
 [ext_resource type="Script" uid="uid://dkcaw51o8hmlr" path="res://Scripts/SPIN.gd" id="1_b8wod"]
-[ext_resource type="Texture2D" uid="uid://ccyhf0kjs8tqb" path="res://Sprites/square.png" id="2_5vd31"]
+[ext_resource type="Texture2D" uid="uid://cijps08ovwheu" path="res://Sprites/binarytex.png" id="2_5vd31"]
 [ext_resource type="PackedScene" uid="uid://csvwbgfsg7kfd" path="res://Scenes/kill.tscn" id="3_q7oqy"]
 [ext_resource type="PackedScene" uid="uid://7pr7mf0enhyj" path="res://Scenes/shield.tscn" id="4_ma4pr"]
+[ext_resource type="Texture2D" uid="uid://ccyhf0kjs8tqb" path="res://Sprites/square.png" id="5_ma4pr"]
+[ext_resource type="Texture2D" uid="uid://dvichygbq7yl1" path="res://Sprites/squareoutline.png" id="5_q7oqy"]
+[ext_resource type="Texture2D" uid="uid://cc24ob4qdjlic" path="res://Sprites/binarytex_white.png" id="6_q7oqy"]
+[ext_resource type="Texture2D" uid="uid://b506vt8yv4sed" path="res://Sprites/lock.png" id="8_je02e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(321, 20)
@@ -15,70 +19,143 @@ script = ExtResource("1_b8wod")
 position = Vector2(-107, 0)
 scale = Vector2(0.3200003, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=4086171]
-modulate = Color(7.412136e-06, 0.61870885, 0.8209848, 1)
-position = Vector2(-7.6293945e-06, 156)
-scale = Vector2(2.5312498, 0.17187491)
-texture = ExtResource("2_5vd31")
+[node name="back" type="Sprite2D" parent="StaticBody2D" unique_id=549969928]
+modulate = Color(0.3882353, 0.60784316, 1, 0.1254902)
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-0.11514282, 156.4002)
+scale = Vector2(0.7967152, 0.15890168)
+texture = ExtResource("5_ma4pr")
+region_enabled = true
+region_rect = Rect2(0, 0, 410.31, 146.795)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=286673992]
+visible = false
 position = Vector2(2, 155)
 shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Binarytex2" type="Sprite2D" parent="StaticBody2D" unique_id=1862346013]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(31.911915, 156)
+scale = Vector2(0.536, 0.216)
+texture = ExtResource("2_5vd31")
+region_enabled = true
+region_rect = Rect2(0, 0, 463.71, 88.32)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=871333347]
 position = Vector2(0, -306)
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=748220252]
-modulate = Color(7.412136e-06, 0.61870885, 0.8209848, 1)
-position = Vector2(-7.6293945e-06, 156)
-scale = Vector2(2.5312498, 0.17187491)
-texture = ExtResource("2_5vd31")
+[node name="back" type="Sprite2D" parent="StaticBody2D2" unique_id=1588773012]
+modulate = Color(0.3882353, 0.60784316, 1, 0.1254902)
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(1.4999979, 156.4002)
+scale = Vector2(0.797561, 0.15890168)
+texture = ExtResource("5_ma4pr")
+region_enabled = true
+region_rect = Rect2(0, 0, 410.31, 146.795)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=608199213]
+visible = false
 position = Vector2(2, 155)
 shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Binarytex2" type="Sprite2D" parent="StaticBody2D2" unique_id=1413996567]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(1.9999999, 156)
+rotation = 3.1365108
+scale = Vector2(0.203, 0.216)
+texture = ExtResource("2_5vd31")
+region_enabled = true
+region_rect = Rect2(0, 0, 1402.3, 88.32)
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1239710508]
 position = Vector2(0, 5.0000153)
 rotation = -1.5827397
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3" unique_id=1581337247]
-modulate = Color(7.412136e-06, 0.61870885, 0.8209848, 1)
-position = Vector2(-7.6293945e-06, 156)
-scale = Vector2(2.5312498, 0.17187491)
-texture = ExtResource("2_5vd31")
+[node name="back" type="Sprite2D" parent="StaticBody2D3" unique_id=1073678905]
+modulate = Color(0.3882353, 0.60784316, 1, 0.1254902)
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0.4616778, 156.40022)
+scale = Vector2(0.79952914, 0.15890169)
+texture = ExtResource("5_ma4pr")
+region_enabled = true
+region_rect = Rect2(0, 0, 410.31, 146.795)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1412749783]
+visible = false
 position = Vector2(2, 155)
 shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Binarytex" type="Sprite2D" parent="StaticBody2D3" unique_id=1160376570]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, 155.935)
+rotation = -6.278308
+scale = Vector2(0.23775892, 0.21300605)
+texture = ExtResource("2_5vd31")
+region_enabled = true
+region_rect = Rect2(0, 0, 1362.815, 89.56)
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1190086902]
 position = Vector2(-305.00003, 5.0000153)
 rotation = -1.5827397
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4" unique_id=1083239956]
-modulate = Color(7.412136e-06, 0.61870885, 0.8209848, 1)
-position = Vector2(-7.6293945e-06, 156)
-scale = Vector2(2.5312498, 0.17187491)
-texture = ExtResource("2_5vd31")
+[node name="back" type="Sprite2D" parent="StaticBody2D4" unique_id=881116654]
+modulate = Color(0.3882353, 0.60784316, 1, 0.1254902)
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-0.11516762, 156.4002)
+scale = Vector2(0.7967152, 0.15890168)
+texture = ExtResource("5_ma4pr")
+region_enabled = true
+region_rect = Rect2(0, 0, 410.31, 146.795)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1179446544]
+visible = false
 position = Vector2(2, 155)
 shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Binarytex2" type="Sprite2D" parent="StaticBody2D4" unique_id=1004209449]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-0.86337125, 156.01683)
+rotation = -3.1366878
+scale = Vector2(0.213, 0.216)
+texture = ExtResource("2_5vd31")
+region_enabled = true
+region_rect = Rect2(0, 0, 1519.27, 88.32)
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=103473758]
 position = Vector2(79, 0)
 scale = Vector2(0.4400003, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5" unique_id=1357065064]
-modulate = Color(7.412136e-06, 0.61870885, 0.8209848, 1)
-position = Vector2(-7.6293945e-06, 156)
-scale = Vector2(2.5312498, 0.17187491)
-texture = ExtResource("2_5vd31")
+[node name="back" type="Sprite2D" parent="StaticBody2D5" unique_id=1348700097]
+modulate = Color(0.3882353, 0.60784316, 1, 0.1254902)
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(21.590897, 156.40018)
+scale = Vector2(0.88137406, 0.15890166)
+texture = ExtResource("5_ma4pr")
+region_enabled = true
+region_rect = Rect2(0, 0, 410.31, 146.795)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1566331023]
+visible = false
 position = Vector2(2, 155)
 shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Binarytex" type="Sprite2D" parent="StaticBody2D5" unique_id=10197296]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-2.272729, 156)
+scale = Vector2(0.423, 0.216)
+texture = ExtResource("2_5vd31")
+region_enabled = true
+region_rect = Rect2(0, 0, 741.135, 88.32)
 
 [node name="kill" parent="." unique_id=1858201397 groups=["kill"] instance=ExtResource("3_q7oqy")]
 position = Vector2(137, 49)
@@ -118,13 +195,66 @@ OPENER = NodePath("../OPENER")
 position = Vector2(-23, 1)
 scale = Vector2(0.4400003, 0.99730563)
 
+[node name="back" type="Sprite2D" parent="OPENER" unique_id=1977744375]
+modulate = Color(0.3882353, 0.60784316, 1, 0.1254902)
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0.5419121, 154.62172)
+scale = Vector2(0.31886402, 0.13453908)
+texture = ExtResource("5_ma4pr")
+region_enabled = true
+region_rect = Rect2(0, 0, 410.31, 146.795)
+
 [node name="Sprite2D" type="Sprite2D" parent="OPENER" unique_id=112287190]
-modulate = Color(0, 0.2543294, 0.2860765, 1)
-position = Vector2(-7.6293945e-06, 156)
-scale = Vector2(1.0766994, 0.17187491)
-texture = ExtResource("2_5vd31")
+modulate = Color(0.35686275, 0.43137255, 0.88235295, 1)
+texture_filter = 1
+position = Vector2(-7.6293945e-06, 154.41606)
+scale = Vector2(0.58, -0.084)
+texture = ExtResource("5_q7oqy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OPENER" unique_id=378767075]
+visible = false
 position = Vector2(2, 155)
 scale = Vector2(0.44998655, 1.1068965)
 shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Binarytex" type="Sprite2D" parent="OPENER" unique_id=1936626871]
+modulate = Color(0.3882353, 0.60784316, 1, 1)
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, 154.41603)
+rotation = -0.0021343522
+scale = Vector2(0.6, 0.224)
+texture = ExtResource("6_q7oqy")
+region_enabled = true
+region_rect = Rect2(0, 0, 217.07, 78.625)
+
+[node name="Lock" type="Sprite2D" parent="OPENER" unique_id=804405499]
+texture_filter = 1
+position = Vector2(0, 154.41605)
+scale = Vector2(1.4936271, 0.6590028)
+texture = ExtResource("8_je02e")
+
+[node name="Binarytex" type="Sprite2D" parent="." unique_id=306649794]
+visible = false
+modulate = Color(1, 1, 1, 0.015686275)
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(4, 4)
+rotation = 3.130921
+scale = Vector2(0.29, 0.224)
+texture = ExtResource("6_q7oqy")
+region_enabled = true
+region_rect = Rect2(0, 0, 1000, 1300)
+
+[node name="back" type="Sprite2D" parent="." unique_id=1529431049]
+visible = false
+modulate = Color(1, 1, 1, 0.015686275)
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(4, 4)
+rotation = -0.0021343522
+scale = Vector2(0.145, 0.112)
+texture = ExtResource("5_ma4pr")
+region_enabled = true
+region_rect = Rect2(0, 0, 2000, 2608.685)
