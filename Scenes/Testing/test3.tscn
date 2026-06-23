@@ -5,8 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://dhwn0tdsp18wy" path="res://Scenes/Testing/Wheel3.tscn" id="3_svvfb"]
 [ext_resource type="PackedScene" uid="uid://cato3i0g8w10g" path="res://Scenes/Background.tscn" id="4_8hojv"]
 [ext_resource type="PackedScene" uid="uid://c3j4lpq1cm8qt" path="res://Scenes/Testing/node_2d.tscn" id="5_bqkbb"]
+[ext_resource type="Texture2D" uid="uid://qeoscg7do12" path="res://Sprites/sprite_0.png" id="6_2xqsi"]
 [ext_resource type="PackedScene" uid="uid://dkerpte1krpwj" path="res://Scenes/Testing/Wheel5.tscn" id="6_3du0l"]
 [ext_resource type="PackedScene" uid="uid://biyjtldv8tp05" path="res://StarterPlatform.tscn" id="7_0alrg"]
+[ext_resource type="Texture2D" uid="uid://dsg2h705drwt2" path="res://Sprites/life.png" id="7_o3fh0"]
+[ext_resource type="FontFile" uid="uid://pa5nbt6pbd4k" path="res://Sprites/countdown_font.png" id="8_g4xsj"]
 
 [node name="Test3" type="Node2D" unique_id=521406567]
 
@@ -41,21 +44,122 @@ rotation = 1.5707964
 rotation_speed = 35.0
 spin_direction = -1
 
-[node name="Node2D" parent="." unique_id=1415329539 node_paths=PackedStringArray("text") instance=ExtResource("2_3du0l")]
+[node name="Node2D" parent="." unique_id=1415329539 node_paths=PackedStringArray("lives", "timer_text", "timer") instance=ExtResource("2_3du0l")]
 position = Vector2(1876, 831.99994)
 scale = Vector2(0.2, 0.2)
-text = NodePath("Label")
+lives = [NodePath("TextureRect"), NodePath("TextureRect2"), NodePath("TextureRect3"), NodePath("TextureRect4"), NodePath("TextureRect5"), NodePath("TextureRect6"), NodePath("TextureRect7")]
+timer_text = NodePath("Label")
+timer = NodePath("../Timer")
 
-[node name="Label" type="Label" parent="Node2D" unique_id=1495174173]
-offset_left = -2714.9998
-offset_top = -1424.9995
-offset_right = -2349.9998
-offset_bottom = -1167.9995
-theme_override_font_sizes/font_size = 188
-text = "LIFE: "
+[node name="TextureRect9" type="ColorRect" parent="Node2D" unique_id=1904486884]
+modulate = Color(1, 1, 1, 0.23137255)
+texture_filter = 1
+offset_left = -2879.9995
+offset_top = -1619.9998
+offset_right = -2698.3296
+offset_bottom = -1114.9998
+scale = Vector2(11.402, 0.641)
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect8" type="ColorRect" parent="Node2D" unique_id=1911454417]
+modulate = Color(1, 1, 1, 0.1882353)
+texture_filter = 1
+offset_left = -2724.9995
+offset_top = -1564.9998
+offset_right = -2219.9995
+offset_bottom = -1059.9998
+rotation = 0.2470043
+
+[node name="TextureRect" type="TextureRect" parent="Node2D" unique_id=1717189116]
+texture_filter = 1
+offset_left = -2724.9998
+offset_top = -1564.9996
+offset_right = -2219.9998
+offset_bottom = -1059.9996
+rotation = 0.2470043
+texture = ExtResource("6_2xqsi")
+
+[node name="TextureRect2" type="TextureRect" parent="Node2D" unique_id=1457019249]
+texture_filter = 1
+offset_left = -2169.9998
+offset_top = -1509.9996
+offset_right = -1664.9998
+offset_bottom = -1004.99963
+scale = Vector2(0.411594, 0.411594)
+texture = ExtResource("7_o3fh0")
+
+[node name="TextureRect3" type="TextureRect" parent="Node2D" unique_id=1766744897]
+texture_filter = 1
+offset_left = -1949.9998
+offset_top = -1509.9996
+offset_right = -1444.9998
+offset_bottom = -1004.99963
+scale = Vector2(0.411594, 0.411594)
+texture = ExtResource("7_o3fh0")
+
+[node name="TextureRect4" type="TextureRect" parent="Node2D" unique_id=1223360676]
+texture_filter = 1
+offset_left = -1729.9998
+offset_top = -1509.9996
+offset_right = -1224.9998
+offset_bottom = -1004.99963
+scale = Vector2(0.411594, 0.411594)
+texture = ExtResource("7_o3fh0")
+
+[node name="TextureRect5" type="TextureRect" parent="Node2D" unique_id=1082968482]
+texture_filter = 1
+offset_left = -1524.9998
+offset_top = -1509.9996
+offset_right = -1019.99976
+offset_bottom = -1004.99963
+scale = Vector2(0.411594, 0.411594)
+texture = ExtResource("7_o3fh0")
+
+[node name="TextureRect6" type="TextureRect" parent="Node2D" unique_id=905225511]
+texture_filter = 1
+offset_left = -1314.9998
+offset_top = -1509.9996
+offset_right = -809.99976
+offset_bottom = -1004.99963
+scale = Vector2(0.411594, 0.411594)
+texture = ExtResource("7_o3fh0")
+
+[node name="TextureRect7" type="TextureRect" parent="Node2D" unique_id=1958704218]
+texture_filter = 1
+offset_left = -1079.9996
+offset_top = -1509.9996
+offset_right = -574.99963
+offset_bottom = -1004.99963
+scale = Vector2(0.411594, 0.411594)
+texture = ExtResource("7_o3fh0")
+
+[node name="TextureRect10" type="ColorRect" parent="Node2D" unique_id=68699325]
+modulate = Color(1, 1, 1, 0.5411765)
+texture_filter = 1
+offset_left = -580.00024
+offset_top = -1254.9998
+offset_right = 634.99976
+offset_bottom = -934.99976
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Node2D" unique_id=1713894068]
+texture_filter = 1
+offset_left = -2874.9995
+offset_top = -1264.9996
+offset_right = 2880.0
+offset_bottom = -959.99963
+theme_override_fonts/font = ExtResource("8_g4xsj")
+theme_override_font_sizes/font_size = 305
+text = "00:00"
+horizontal_alignment = 1
 
 [node name="CanvasLayer" parent="." unique_id=882358980 instance=ExtResource("4_8hojv")]
 
 [node name="StaticBody2D" parent="." unique_id=1434404487 instance=ExtResource("7_0alrg")]
 position = Vector2(1875, 861)
 scale = Vector2(2, 2)
+
+[node name="Timer" type="Timer" parent="." unique_id=275048823]
+wait_time = 180.0
+one_shot = true
+autostart = true

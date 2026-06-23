@@ -2,7 +2,9 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
-@export var text: Label
+@export var lives : Array[TextureRect]
+@export var timer_text : Label
+@export var timer : Timer
 var life = 35
 var shieldbroken = false
 
@@ -11,10 +13,10 @@ var invincible_timer: float = 0.0
 func _ready() -> void:
 	floor_snap_length = 5.0
 	floor_max_angle = deg_to_rad(60.0)
-	if text:
-		text.text = "LIFE: " + str(life)
 
 func _physics_process(delta: float) -> void:
+	timer_text.text = str(int(timer.time_left / 60)) + ":" + str(int(timer.time_left) % 60)
+	
 	if invincible_timer > 0:
 		invincible_timer -= delta
 	
@@ -43,8 +45,7 @@ func _physics_process(delta: float) -> void:
 				life -= 5
 				invincible_timer = 1.0
 				
-				if text:
-					text.text = "LIFE: " + str(life)
+				lives[life / 5].visible = false
 					
 				if life <= 0:
 					get_tree().reload_current_scene()
