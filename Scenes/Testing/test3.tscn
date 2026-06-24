@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://biyjtldv8tp05" path="res://StarterPlatform.tscn" id="7_0alrg"]
 [ext_resource type="Texture2D" uid="uid://dsg2h705drwt2" path="res://Sprites/life.png" id="7_o3fh0"]
 [ext_resource type="FontFile" uid="uid://pa5nbt6pbd4k" path="res://Sprites/countdown_font.png" id="8_g4xsj"]
+[ext_resource type="Script" uid="uid://d2os1uvkvjrrr" path="res://Scenes/Testing/timer.gd" id="11_28d7y"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g4v7s"]
 
@@ -165,6 +166,7 @@ scale = Vector2(2, 2)
 wait_time = 180.0
 one_shot = true
 autostart = true
+script = ExtResource("11_28d7y")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=339617787]
 
