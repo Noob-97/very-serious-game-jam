@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bx40csv71pguv"]
 
+[ext_resource type="Shader" uid="uid://cn4shcqfnt5u5" path="res://Shaders/vhs.gdshader" id="1_xurmh"]
 [ext_resource type="PackedScene" uid="uid://cofgqrrnshw5y" path="res://Scenes/player.tscn" id="2_3du0l"]
 [ext_resource type="PackedScene" uid="uid://b35yxmhicpxuj" path="res://Scenes/Testing/Wheel4.tscn" id="3_qj7nf"]
 [ext_resource type="PackedScene" uid="uid://dhwn0tdsp18wy" path="res://Scenes/Testing/Wheel3.tscn" id="3_svvfb"]
@@ -12,9 +13,21 @@
 [ext_resource type="FontFile" uid="uid://pa5nbt6pbd4k" path="res://Sprites/countdown_font.png" id="8_g4xsj"]
 [ext_resource type="Script" uid="uid://d2os1uvkvjrrr" path="res://Scenes/Testing/timer.gd" id="11_28d7y"]
 
+[sub_resource type="Environment" id="Environment_g4v7s"]
+background_mode = 3
+glow_enabled = true
+glow_bloom = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xurmh"]
+shader = ExtResource("1_xurmh")
+shader_parameter/shake = 0.0
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g4v7s"]
 
 [node name="Test3" type="Node2D" unique_id=521406567]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=239507261]
+environment = SubResource("Environment_g4v7s")
 
 [node name="wheelofdeath5" parent="." unique_id=1919556751 instance=ExtResource("6_3du0l")]
 position = Vector2(1875, 824)
@@ -53,6 +66,13 @@ scale = Vector2(0.2, 0.2)
 lives = [NodePath("TextureRect"), NodePath("TextureRect2"), NodePath("TextureRect3"), NodePath("TextureRect4"), NodePath("TextureRect5"), NodePath("TextureRect6"), NodePath("TextureRect7")]
 timer_text = NodePath("Label")
 timer = NodePath("../Timer")
+
+[node name="ColorRect" type="ColorRect" parent="Player" unique_id=861983837]
+material = SubResource("ShaderMaterial_xurmh")
+offset_left = -2879.9995
+offset_top = -1619.9995
+offset_right = 2880.0
+offset_bottom = 1610.0
 
 [node name="TextureRect9" type="ColorRect" parent="Player" unique_id=1904486884]
 modulate = Color(1, 1, 1, 0.23137255)
@@ -131,7 +151,7 @@ texture = ExtResource("7_o3fh0")
 texture_filter = 1
 offset_left = -1079.9996
 offset_top = -1509.9996
-offset_right = -574.99963
+offset_right = -574.99976
 offset_bottom = -1004.99963
 scale = Vector2(0.411594, 0.411594)
 texture = ExtResource("7_o3fh0")

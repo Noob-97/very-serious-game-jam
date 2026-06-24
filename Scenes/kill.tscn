@@ -8,7 +8,7 @@ size = Vector2(20, 22.570211)
 [node name="kill" type="StaticBody2D" unique_id=1858201397]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1380825777]
-modulate = Color(1, 0, 0, 1)
+modulate = Color(1.8247963, 0, 0, 1)
 texture_filter = 1
 position = Vector2(1.9999992, -10)
 scale = Vector2(3.7333329, 3.1333334)

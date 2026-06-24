@@ -3,13 +3,31 @@
 [ext_resource type="Script" uid="uid://oov74fjx6rik" path="res://Scripts/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://qeoscg7do12" path="res://Sprites/sprite_0.png" id="2_onrkg"]
 
+[sub_resource type="Gradient" id="Gradient_cvnsp"]
+offsets = PackedFloat32Array(0.0042735045, 1)
+colors = PackedColorArray(1, 1, 1, 0.59607846, 0, 0, 0, 0)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(130, 145)
 
 [node name="player" type="CharacterBody2D" unique_id=1415329539]
 script = ExtResource("1_onrkg")
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=129428723]
+modulate = Color(2.454227, 2.454227, 2.454227, 0.6392157)
+texture_filter = 1
+position = Vector2(-6.05, 2.085)
+texture = ExtResource("2_onrkg")
+lifetime = 0.5
+particle_flag_align_y = true
+direction = Vector2(0, 0)
+gravity = Vector2(0, 0)
+scale_amount_min = 1.5
+scale_amount_max = 1.5
+color_ramp = SubResource("Gradient_cvnsp")
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=644688294]
+modulate = Color(1.2360035, 1.2360035, 1.2360035, 1)
 texture_filter = 1
 position = Vector2(-6.4999914, 2.4999952)
 scale = Vector2(8.433333, 8.699999)
