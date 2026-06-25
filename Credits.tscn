@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bm1tqmt0mqaya"]
+
+[ext_resource type="Texture2D" uid="uid://btss6cu357bfi" path="res://CreditsV1RUS.png" id="1_ynf4x"]
+
+[node name="Control" type="Control" unique_id=1212309337]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=617170197]
+layout_mode = 0
+offset_left = -1676.0
+offset_top = -53.0
+offset_right = -178.0
+offset_bottom = 690.5
+scale = Vector2(2, 2)
+texture = ExtResource("1_ynf4x")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=210048971]
+z_index = 1
+layout_mode = 0
+offset_left = 58.00003
+offset_top = 12.999999
+offset_right = 218.00006
+offset_bottom = 333.0
+scale = Vector2(2.01, 2.01)
+texture = ExtResource("1_ynf4x")
