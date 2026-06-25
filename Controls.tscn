@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c201qfqsf3r87"]
+
+[ext_resource type="VideoStream" uid="uid://cndyrbtny2iuu" path="res://ControlsV1RUS.ogv" id="1_223ah"]
+[ext_resource type="Script" uid="uid://snn0owpx6my4" path="res://controls.gd" id="1_q8khb"]
+
+[node name="Control" type="Control" unique_id=209028058]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_q8khb")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1219399839]
+texture_filter = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.62, 0.62)
+stream = ExtResource("1_223ah")
+autoplay = true

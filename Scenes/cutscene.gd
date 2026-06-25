@@ -1,6 +1,6 @@
 extends Control
 
-const NEXT_SCENE_PATH = "res://Scenes/Testing/test3.tscn"
+const NEXT_SCENE_PATH = "res://Controls.tscn"
 
 @onready var video_player: VideoStreamPlayer = $VideoStreamPlayer
 
