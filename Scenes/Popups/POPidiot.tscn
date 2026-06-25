@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cs2q2261k61k2"]
+
+[ext_resource type="Script" uid="uid://bhtobdrdulfai" path="res://popup.gd" id="1_cudiu"]
+[ext_resource type="Texture2D" uid="uid://dkirih1n2twtv" path="res://Sprites/youareanidiot.png" id="2_cudiu"]
+[ext_resource type="Shader" uid="uid://dxdc3bn8wgsep" path="res://Shaders/invert.gdshader" id="2_esh5o"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b70f4"]
+resource_local_to_scene = true
+shader = ExtResource("2_esh5o")
+shader_parameter/invert = false
+
+[node name="Control" type="Control" unique_id=273180899]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1151.0
+offset_bottom = 656.0
+
+[node name="Control" type="Control" parent="." unique_id=406351723]
+anchors_preset = 0
+offset_left = 475.0
+offset_top = 248.0
+offset_right = 675.0
+offset_bottom = 365.0
+script = ExtResource("1_cudiu")
+Type = 3
+
+[node name="popup" type="TextureRect" parent="Control" unique_id=1833032100]
+texture_filter = 1
+material = SubResource("ShaderMaterial_b70f4")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.178
+anchor_bottom = 0.14500001
+offset_left = -29.0
+offset_top = -53.0
+offset_right = 196.76599
+offset_bottom = 186.41
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_cudiu")
+
+[node name="Button" type="Button" parent="Control" unique_id=2011623616]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 176.0
+offset_top = -9.0
+offset_right = 206.0
+offset_bottom = 21.0
+theme_override_font_sizes/font_size = 5
+
+[node name="Timer" type="Timer" parent="Control" unique_id=15358438]
+wait_time = 6.0
+autostart = true
+
+[connection signal="pressed" from="Control/Button" to="Control" method="_on_interacted"]
+[connection signal="timeout" from="Control/Timer" to="Control" method="_idiot_finished"]

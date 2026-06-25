@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dfh7v5qrj2v1l"]
+
+[ext_resource type="Script" uid="uid://bhtobdrdulfai" path="res://popup.gd" id="1_et4a3"]
+[ext_resource type="Texture2D" uid="uid://qyi6a0ruafid" path="res://Sprites/dvd.png" id="2_et4a3"]
+
+[node name="Control" type="Control" unique_id=273180899]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1151.0
+offset_bottom = 656.0
+
+[node name="Control" type="Control" parent="." unique_id=406351723]
+anchors_preset = 0
+offset_left = 469.0
+offset_top = 235.0
+offset_right = 638.0
+offset_bottom = 393.0
+script = ExtResource("1_et4a3")
+Type = 2
+
+[node name="popup" type="TextureRect" parent="Control" unique_id=1833032100]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.178
+anchor_bottom = 0.14500001
+offset_left = -45.0
+offset_top = -50.0
+offset_right = 180.76599
+offset_bottom = 189.41
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_et4a3")
+
+[node name="Button" type="Button" parent="Control" unique_id=2011623616]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 143.0
+offset_top = -7.0
+offset_right = 173.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 5
+
+[connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]
