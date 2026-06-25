@@ -1,15 +1,13 @@
 [gd_scene format=3 uid="uid://c6oywfwhv24t5"]
 
 [ext_resource type="Texture2D" uid="uid://b2y4rr15ac3rg" path="res://EndingError.png" id="1_8gcuj"]
-[ext_resource type="Script" uid="uid://4cimuxvjwip1" path="res://Scenes/ending_error.gd" id="1_h44dh"]
-[ext_resource type="Script" uid="uid://dtq1g8kvj6obj" path="res://Scenes/timer.gd" id="3_y3o1b"]
+[ext_resource type="Script" uid="uid://dtq1g8kvj6obj" path="res://Scenes/credits_timer.gd" id="3_y3o1b"]
 
 [node name="Control" type="Control" unique_id=1707730362]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_h44dh")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=15456828]
 layout_mode = 0
@@ -19,4 +17,5 @@ texture = ExtResource("1_8gcuj")
 
 [node name="Timer" type="Timer" parent="TextureRect" unique_id=958148161]
 wait_time = 4.0
+autostart = true
 script = ExtResource("3_y3o1b")
