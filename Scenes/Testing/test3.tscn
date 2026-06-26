@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://iw5j42cg27kf" path="res://Scenes/Popups/POPint3.tscn" id="15_gtuna"]
 [ext_resource type="PackedScene" uid="uid://dfh7v5qrj2v1l" path="res://Scenes/Popups/POPdvd.tscn" id="16_oy3dn"]
 [ext_resource type="AudioStream" uid="uid://dreyn0bxkns3k" path="res://Mainplay4 prj.wav" id="24_gtuna"]
+[ext_resource type="AudioStream" uid="uid://ddvwjcxei160s" path="res://Starscreen.wav" id="25_gswq5"]
 
 [sub_resource type="Environment" id="Environment_g4v7s"]
 background_mode = 3
@@ -220,6 +221,11 @@ stream = ExtResource("24_gtuna")
 volume_db = -1.0
 autoplay = true
 playback_type = 1
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=203597773]
+stream = ExtResource("25_gswq5")
+volume_db = -5.5
+autoplay = true
 
 [connection signal="timeout" from="Player/POPUP TIMER" to="Player" method="_on_popup_timer_end"]
 [connection signal="body_entered" from="Area2D" to="Player" method="_escaped"]

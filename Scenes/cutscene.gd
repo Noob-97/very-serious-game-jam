@@ -1,7 +1,5 @@
 extends Control
 
-const NEXT_SCENE_PATH = "res://Controls.tscn"
-
 @onready var video_player: VideoStreamPlayer = $VideoStreamPlayer
 
 func _ready() -> void:
@@ -9,4 +7,4 @@ func _ready() -> void:
 	video_player.finished.connect(_change_scene)
 
 func _change_scene() -> void:
-	get_tree().change_scene_to_file(NEXT_SCENE_PATH)
+	get_tree().change_scene_to_file("res://Scenes/MainMenu.tscn")

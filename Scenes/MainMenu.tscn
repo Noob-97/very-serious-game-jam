@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://jkstkgnw6fvu"]
+
+[ext_resource type="Script" uid="uid://depllj0xrftnk" path="res://Scenes/main_menu.gd" id="1_7467j"]
+[ext_resource type="PackedScene" uid="uid://cato3i0g8w10g" path="res://Scenes/Background.tscn" id="1_tt5f1"]
+[ext_resource type="AudioStream" uid="uid://ddvwjcxei160s" path="res://Starscreen.wav" id="2_853f1"]
+[ext_resource type="PackedScene" uid="uid://ccsr60mdvibmw" path="res://Scenes/Popups/POPsta0.tscn" id="2_pjscj"]
+[ext_resource type="Texture2D" uid="uid://tfrrd41qq3em" path="res://Sprites/Skjermbilde_2026-06-23_151913.png" id="3_8saeu"]
+[ext_resource type="PackedScene" uid="uid://6lnvyqybw88v" path="res://Scenes/Popups/POPsta2.tscn" id="3_m7n2d"]
+[ext_resource type="PackedScene" uid="uid://cj7271y5ver0e" path="res://Scenes/Popups/POPsta3.tscn" id="4_65hh5"]
+[ext_resource type="Shader" uid="uid://dtyw3nyxi3x2e" path="res://Shaders/scroll.gdshader" id="4_df05h"]
+[ext_resource type="Texture2D" uid="uid://cijps08ovwheu" path="res://Sprites/binarytex.png" id="4_ghw46"]
+[ext_resource type="PackedScene" uid="uid://dkerpte1krpwj" path="res://Scenes/Testing/Wheel5.tscn" id="6_cmrfp"]
+[ext_resource type="Shader" uid="uid://bb1d4mhbaxq6r" path="res://Shaders/transparentblack.gdshader" id="7_if7li"]
+[ext_resource type="PackedScene" uid="uid://b35yxmhicpxuj" path="res://Scenes/Testing/Wheel4.tscn" id="7_loo7a"]
+[ext_resource type="PackedScene" uid="uid://dhwn0tdsp18wy" path="res://Scenes/Testing/Wheel3.tscn" id="8_if7li"]
+[ext_resource type="PackedScene" uid="uid://c3j4lpq1cm8qt" path="res://Scenes/Testing/node_2d.tscn" id="9_rrcx7"]
+[ext_resource type="Texture2D" uid="uid://smdq33j5x318" path="res://Sprites/start.png" id="11_if7li"]
+[ext_resource type="Texture2D" uid="uid://dvichygbq7yl1" path="res://Sprites/squareoutline.png" id="12_rrcx7"]
+[ext_resource type="FontFile" uid="uid://dwb0cppillddh" path="res://PixelOperator8-Bold.ttf" id="13_fh7cp"]
+[ext_resource type="PackedScene" uid="uid://dfh7v5qrj2v1l" path="res://Scenes/Popups/POPdvd.tscn" id="14_8e205"]
+
+[sub_resource type="Environment" id="Environment_fh7cp"]
+background_mode = 3
+glow_enabled = true
+glow_bloom = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rrcx7"]
+shader = ExtResource("7_if7li")
+shader_parameter/threshold = 0.14000000665
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8um5k"]
+shader = ExtResource("4_df05h")
+shader_parameter/speed = Vector2(1, 0)
+
+[sub_resource type="Shader" id="Shader_df05h"]
+code = "shader_type canvas_item;
+
+uniform vec2 speed = vec2(0.1, 0.0);
+
+void fragment() {
+    vec2 shifted_uv = UV + (TIME * speed);
+    COLOR = texture(TEXTURE, shifted_uv);
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xim88"]
+shader = SubResource("Shader_df05h")
+shader_parameter/speed = Vector2(-1, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e0k3n"]
+font = ExtResource("13_fh7cp")
+font_color = Color(5.856372, 5.856372, 5.856372, 0.20784314)
+
+[node name="Control" type="Control" unique_id=327322054]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7467j")
+popups = Array[PackedScene]([ExtResource("2_pjscj"), ExtResource("3_m7n2d"), ExtResource("4_65hh5")])
+
+[node name="CanvasLayer" parent="." unique_id=882358980 instance=ExtResource("1_tt5f1")]
+
+[node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=766550159]
+modulate = Color(1, 1, 1, 0.52156866)
+position = Vector2(-146, -55)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="CanvasGroup" unique_id=1667198138]
+environment = SubResource("Environment_fh7cp")
+
+[node name="wheelofdeath5" parent="CanvasGroup" unique_id=1636137289 instance=ExtResource("6_cmrfp")]
+position = Vector2(726, 374)
+rotation = -1.5707964
+scale = Vector2(15.7, 15.7)
+rotation_speed = 8.0
+
+[node name="wheelofdeath4" parent="CanvasGroup" unique_id=691713108 instance=ExtResource("7_loo7a")]
+position = Vector2(728, 382.99994)
+rotation = -1.5707964
+scale = Vector2(8.8, 8.8)
+rotation_speed = 21.0
+spin_direction = -1
+
+[node name="wheelofdeath3" parent="CanvasGroup" unique_id=1557128048 instance=ExtResource("8_if7li")]
+position = Vector2(738.99994, 371.99997)
+scale = Vector2(4.7, 4.7)
+rotation_speed = 30.0
+spin_direction = -1
+
+[node name="wheelofdeath2" parent="CanvasGroup" unique_id=1938194976 instance=ExtResource("9_rrcx7")]
+position = Vector2(735.0001, 368)
+rotation = -3.1415925
+scale = Vector2(2.4, 2.4)
+rotation_speed = 40.0
+
+[node name="wheelofdeath" parent="CanvasGroup" unique_id=625077423 instance=ExtResource("9_rrcx7")]
+position = Vector2(733.0001, 368)
+rotation = 1.5707964
+rotation_speed = 35.0
+spin_direction = -1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1092370899]
+stream = ExtResource("2_853f1")
+autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1685904174]
+texture_filter = 1
+material = SubResource("ShaderMaterial_rrcx7")
+layout_mode = 0
+offset_left = 541.0
+offset_top = 429.0
+offset_right = 1128.0
+offset_bottom = 668.0
+texture = ExtResource("3_8saeu")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=372840042]
+material = SubResource("ShaderMaterial_8um5k")
+layout_mode = 0
+offset_left = 354.42932
+offset_top = 644.7582
+offset_right = 1194.6455
+offset_bottom = 704.7582
+rotation = -0.072725646
+texture = ExtResource("4_ghw46")
+stretch_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=1356088887]
+material = SubResource("ShaderMaterial_xim88")
+layout_mode = 0
+offset_left = -78.0
+offset_top = 1.999939
+offset_right = 762.2162
+offset_bottom = 61.99994
+rotation = -0.072725646
+texture = ExtResource("4_ghw46")
+stretch_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=36645510]
+texture_filter = 1
+layout_mode = 0
+offset_left = 811.0
+offset_top = 351.0
+offset_right = 1098.0
+offset_bottom = 440.0
+texture = ExtResource("11_if7li")
+
+[node name="Button" type="Button" parent="TextureRect4" unique_id=478152461]
+layout_mode = 0
+offset_left = 7.0
+offset_top = -1.0
+offset_right = 282.0
+offset_bottom = 85.0
+flat = true
+
+[node name="TextureRect5" type="TextureRect" parent="." unique_id=367082855]
+modulate = Color(1, 0, 0, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 973.0
+offset_top = 41.0
+offset_right = 1117.0
+offset_bottom = 95.0
+texture = ExtResource("12_rrcx7")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="TextureRect5" unique_id=1682784092]
+layout_mode = 0
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 148.0
+offset_bottom = 60.0
+flat = true
+
+[node name="Label" type="Label" parent="TextureRect5" unique_id=1269835885]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 133.0
+offset_bottom = 46.0
+text = "EXIT
+GAME"
+label_settings = SubResource("LabelSettings_e0k3n")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" parent="." unique_id=273180899 instance=ExtResource("14_8e205")]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 65.00006
+offset_right = 1189.0
+offset_bottom = 721.00006
+scale = Vector2(0.6694599, 0.7525226)
+
+[connection signal="pressed" from="TextureRect4/Button" to="." method="start"]
+[connection signal="pressed" from="TextureRect5/Button" to="." method="exit"]
