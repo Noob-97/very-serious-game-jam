@@ -177,8 +177,8 @@ stretch_mode = 1
 [node name="TextureRect4" type="TextureRect" parent="." unique_id=36645510]
 texture_filter = 1
 layout_mode = 0
-offset_left = 811.0
-offset_top = 351.0
+offset_left = 683.0
+offset_top = 319.0
 offset_right = 1098.0
 offset_bottom = 440.0
 texture = ExtResource("11_if7li")
@@ -187,8 +187,8 @@ texture = ExtResource("11_if7li")
 layout_mode = 0
 offset_left = 7.0
 offset_top = -1.0
-offset_right = 282.0
-offset_bottom = 85.0
+offset_right = 399.0
+offset_bottom = 125.0
 flat = true
 
 [node name="TextureRect5" type="TextureRect" parent="." unique_id=367082855]
@@ -231,9 +231,11 @@ offset_bottom = 721.00006
 scale = Vector2(0.6694599, 0.7525226)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=769484426]
+visible = false
 layout_mode = 0
 offset_right = 1158.0
 offset_bottom = 648.0
+mouse_filter = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect" unique_id=1109373735]
 libraries/ = SubResource("AnimationLibrary_65hh5")
