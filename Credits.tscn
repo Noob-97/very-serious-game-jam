@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bm1tqmt0mqaya"]
 
 [ext_resource type="Texture2D" uid="uid://btss6cu357bfi" path="res://CreditsV1RUS.png" id="1_ynf4x"]
+[ext_resource type="AudioStream" uid="uid://c1tm4dx1cw1xv" path="res://Credits.wav" id="2_4qwwl"]
 
 [node name="Control" type="Control" unique_id=1212309337]
 layout_mode = 3
@@ -26,3 +27,7 @@ offset_right = 218.00006
 offset_bottom = 333.0
 scale = Vector2(2.01, 2.01)
 texture = ExtResource("1_ynf4x")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1206273436]
+stream = ExtResource("2_4qwwl")
+autoplay = true

@@ -6,6 +6,8 @@ var shield_life = 3
 @onready var sprite1 = $"1"
 var invincible_timer: float = 0.0
 
+@onready var break_sfx = $AudioStreamPlayer
+
 @export var OPENER: Node
 
 func _physics_process(delta: float):
@@ -22,3 +24,14 @@ func hit():
 		if shield_life == 1:
 			sprite2.visible = false
 			sprite1.visible = true
+		elif shield_life <= 0:
+			
+			remove_child(break_sfx)
+			
+			get_tree().root.add_child(break_sfx)
+			
+			break_sfx.play()
+			
+			break_sfx.finished.connect(break_sfx.queue_free)
+			
+			queue_free()

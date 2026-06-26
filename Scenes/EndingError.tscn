@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c6oywfwhv24t5"]
 
 [ext_resource type="Texture2D" uid="uid://b2y4rr15ac3rg" path="res://EndingError.png" id="1_8gcuj"]
+[ext_resource type="AudioStream" uid="uid://c65hf44f4ge8s" path="res://Pulse Broken shield.wav" id="3_8f88d"]
 [ext_resource type="Script" uid="uid://dtq1g8kvj6obj" path="res://Scenes/credits_timer.gd" id="3_y3o1b"]
 
 [node name="Control" type="Control" unique_id=1707730362]
@@ -20,3 +21,8 @@ texture = ExtResource("1_8gcuj")
 wait_time = 4.0
 autostart = true
 script = ExtResource("3_y3o1b")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2146294966]
+stream = ExtResource("3_8f88d")
+volume_db = -10.0
+autoplay = true

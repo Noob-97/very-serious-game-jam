@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://ixwgrxm2ce6s" path="res://Scenes/Popups/POPint2.tscn" id="14_oy3dn"]
 [ext_resource type="PackedScene" uid="uid://iw5j42cg27kf" path="res://Scenes/Popups/POPint3.tscn" id="15_gtuna"]
 [ext_resource type="PackedScene" uid="uid://dfh7v5qrj2v1l" path="res://Scenes/Popups/POPdvd.tscn" id="16_oy3dn"]
+[ext_resource type="AudioStream" uid="uid://dreyn0bxkns3k" path="res://Mainplay4 prj.wav" id="24_gtuna"]
 
 [sub_resource type="Environment" id="Environment_g4v7s"]
 background_mode = 3
@@ -213,6 +214,12 @@ script = ExtResource("11_28d7y")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1218594667]
 position = Vector2(2302, 16188)
 shape = SubResource("WorldBoundaryShape2D_g4v7s")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2024258262]
+stream = ExtResource("24_gtuna")
+volume_db = -1.0
+autoplay = true
+playback_type = 1
 
 [connection signal="timeout" from="Player/POPUP TIMER" to="Player" method="_on_popup_timer_end"]
 [connection signal="body_entered" from="Area2D" to="Player" method="_escaped"]

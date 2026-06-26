@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c65hf44f4ge8s"
+path="res://.godot/imported/Pulse Broken shield.wav-63385daa3115226105762eb5ba0a31b2.sample"
+
+[deps]
+
+source_file="res://Pulse Broken shield.wav"
+dest_files=["res://.godot/imported/Pulse Broken shield.wav-63385daa3115226105762eb5ba0a31b2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
