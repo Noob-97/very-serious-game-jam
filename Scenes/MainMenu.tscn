@@ -231,7 +231,6 @@ offset_bottom = 721.00006
 scale = Vector2(0.6694599, 0.7525226)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=769484426]
-visible = false
 layout_mode = 0
 offset_right = 1158.0
 offset_bottom = 648.0

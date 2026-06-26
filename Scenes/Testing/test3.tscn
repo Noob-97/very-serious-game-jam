@@ -24,6 +24,9 @@
 [ext_resource type="PackedScene" uid="uid://iw5j42cg27kf" path="res://Scenes/Popups/POPint3.tscn" id="15_gtuna"]
 [ext_resource type="PackedScene" uid="uid://dfh7v5qrj2v1l" path="res://Scenes/Popups/POPdvd.tscn" id="16_oy3dn"]
 [ext_resource type="Script" uid="uid://d17pxawmfscrb" path="res://Scenes/splash.gd" id="21_6xsw8"]
+[ext_resource type="AudioStream" uid="uid://ibsfqcr7kva4" path="res://you-are-an-idiot__.mp3" id="22_dw7f2"]
+[ext_resource type="AudioStream" uid="uid://bxhaug35lh44n" path="res://error.mp3" id="23_veln2"]
+[ext_resource type="AudioStream" uid="uid://vl4rwsyllwob" path="res://mac-quack.mp3" id="24_1c0tj"]
 [ext_resource type="AudioStream" uid="uid://dreyn0bxkns3k" path="res://Mainplay4 prj.wav" id="24_gtuna"]
 [ext_resource type="AudioStream" uid="uid://ddvwjcxei160s" path="res://Starscreen.wav" id="25_gswq5"]
 
@@ -245,6 +248,18 @@ mouse_filter = 2
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player/ColorRect2" unique_id=850739128]
 libraries/ = SubResource("AnimationLibrary_dw7f2")
 script = ExtResource("21_6xsw8")
+
+[node name="idiot" type="AudioStreamPlayer" parent="Player" unique_id=1753538263]
+stream = ExtResource("22_dw7f2")
+volume_db = -10.0
+
+[node name="popupsfx" type="AudioStreamPlayer" parent="Player" unique_id=1926826837]
+stream = ExtResource("23_veln2")
+volume_db = -10.0
+
+[node name="duck" type="AudioStreamPlayer" parent="Player" unique_id=1477336969]
+stream = ExtResource("24_1c0tj")
+volume_db = -10.0
 
 [node name="CanvasLayer" parent="." unique_id=882358980 instance=ExtResource("4_8hojv")]
 

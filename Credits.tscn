@@ -1,13 +1,58 @@
 [gd_scene format=3 uid="uid://bm1tqmt0mqaya"]
 
+[ext_resource type="Script" uid="uid://l0c0vymmct7u" path="res://credits.gd" id="1_obosj"]
 [ext_resource type="Texture2D" uid="uid://btss6cu357bfi" path="res://CreditsV1RUS.png" id="1_ynf4x"]
 [ext_resource type="AudioStream" uid="uid://c1tm4dx1cw1xv" path="res://Credits.wav" id="2_4qwwl"]
+[ext_resource type="Texture2D" uid="uid://dvichygbq7yl1" path="res://Sprites/squareoutline.png" id="4_xic2l"]
+[ext_resource type="FontFile" uid="uid://dwb0cppillddh" path="res://PixelOperator8-Bold.ttf" id="5_s70hm"]
+
+[sub_resource type="Animation" id="Animation_obosj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_k2yj5"]
+resource_name = "credits_fadeout"
+length = 18.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(15.166667, 18.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -80.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xic2l"]
+_data = {
+&"RESET": SubResource("Animation_obosj"),
+&"credits_fadeout": SubResource("Animation_k2yj5")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_ia8qu"]
+font = ExtResource("5_s70hm")
+font_color = Color(5.856372, 5.856372, 5.856372, 0.20784314)
 
 [node name="Control" type="Control" unique_id=1212309337]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_obosj")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=617170197]
 layout_mode = 0
@@ -20,6 +65,7 @@ texture = ExtResource("1_ynf4x")
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=210048971]
 z_index = 1
+texture_filter = 1
 layout_mode = 0
 offset_left = 58.00003
 offset_top = 12.999999
@@ -31,3 +77,39 @@ texture = ExtResource("1_ynf4x")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1206273436]
 stream = ExtResource("2_4qwwl")
 autoplay = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=545291220]
+libraries/ = SubResource("AnimationLibrary_xic2l")
+
+[node name="TextureRect5" type="TextureRect" parent="." unique_id=1280009102]
+modulate = Color(0, 0.6464569, 0.21292907, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 952.0
+offset_top = 39.0
+offset_right = 1096.0
+offset_bottom = 93.0
+texture = ExtResource("4_xic2l")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="TextureRect5" unique_id=798487416]
+layout_mode = 0
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 148.0
+offset_bottom = 60.0
+flat = true
+
+[node name="Label" type="Label" parent="TextureRect5" unique_id=967711828]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 133.0
+offset_bottom = 46.0
+text = "MAIN
+MENU"
+label_settings = SubResource("LabelSettings_ia8qu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TextureRect5/Button" to="." method="back"]

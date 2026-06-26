@@ -49,7 +49,7 @@ offset_bottom = 21.0
 theme_override_font_sizes/font_size = 5
 
 [node name="Timer" type="Timer" parent="Control" unique_id=15358438]
-wait_time = 6.0
+wait_time = 5.25
 autostart = true
 
 [connection signal="pressed" from="Control/Button" to="Control" method="_on_interacted"]

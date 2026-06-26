@@ -14,6 +14,9 @@ var layer = 1
 var duck_popup = load("res://Scenes/Popups/POPsta6.tscn")
 var idiot_popup = load("res://Scenes/Popups/POPidiot.tscn")
 @onready var popup_parent = $Popups
+@onready var idiot_song = $idiot
+@onready var popup_sfx = $popupsfx
+@onready var duck = $duck
 
 var invincible_timer: float = 0.0
 
@@ -22,7 +25,9 @@ func _ready() -> void:
 	floor_max_angle = deg_to_rad(60.0)
 
 func _physics_process(delta: float) -> void:
-	timer_text.text = str(int(timer.time_left / 60)) + ":" + str(int(timer.time_left) % 60)
+	var minutes = int(timer.time_left / 60)
+	var seconds = int(timer.time_left) % 60
+	timer_text.text = "%d:%02d" % [minutes, seconds]
 	
 	if invincible_timer > 0:
 		invincible_timer -= delta
@@ -71,6 +76,7 @@ func _physics_process(delta: float) -> void:
 
 func generate_popup():
 	if popup_parent.get_child_count() < 6:
+		popup_sfx.play()
 		var random = randi_range(0, popups.size() - 1)
 		var scene = popups[random].instantiate()
 		popup_parent.add_child(scene)
@@ -89,6 +95,7 @@ func _escaped(body: Node2D) -> void:
 		get_tree().call_deferred("change_scene_to_file", "res://Scenes/EndingError.tscn")
 
 func this_player_is_an_idiot():
+	idiot_song.play()
 	for i in 6:
 		var scene = idiot_popup.instantiate()
 		popup_parent.add_child(scene)
@@ -96,6 +103,7 @@ func this_player_is_an_idiot():
 		scene.position = Vector2(-2900, -1750)
 
 func i_love_ducks():
+	duck.play()
 	for i in 10:
 		var scene = duck_popup.instantiate()
 		popup_parent.add_child(scene)
