@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://ixwgrxm2ce6s" path="res://Scenes/Popups/POPint2.tscn" id="14_oy3dn"]
 [ext_resource type="PackedScene" uid="uid://iw5j42cg27kf" path="res://Scenes/Popups/POPint3.tscn" id="15_gtuna"]
 [ext_resource type="PackedScene" uid="uid://dfh7v5qrj2v1l" path="res://Scenes/Popups/POPdvd.tscn" id="16_oy3dn"]
+[ext_resource type="Script" uid="uid://d17pxawmfscrb" path="res://Scenes/splash.gd" id="21_6xsw8"]
 [ext_resource type="AudioStream" uid="uid://dreyn0bxkns3k" path="res://Mainplay4 prj.wav" id="24_gtuna"]
 [ext_resource type="AudioStream" uid="uid://ddvwjcxei160s" path="res://Starscreen.wav" id="25_gswq5"]
 
@@ -34,6 +35,42 @@ glow_bloom = 1.0
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xurmh"]
 shader = ExtResource("1_xurmh")
 shader_parameter/shake = 0.0
+
+[sub_resource type="Animation" id="Animation_pjscj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_m7n2d"]
+resource_name = "fadeout"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dw7f2"]
+_data = {
+&"RESET": SubResource("Animation_pjscj"),
+&"fadeout": SubResource("Animation_m7n2d")
+}
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g4v7s"]
 
@@ -197,6 +234,16 @@ wait_time = 6.0
 [node name="Popups" type="Control" parent="Player" unique_id=180602131]
 layout_mode = 3
 anchors_preset = 0
+
+[node name="ColorRect2" type="ColorRect" parent="Player" unique_id=1158760234]
+offset_left = -2904.9998
+offset_top = -1614.9995
+offset_right = 2964.9998
+offset_bottom = 1620.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/ColorRect2" unique_id=850739128]
+libraries/ = SubResource("AnimationLibrary_dw7f2")
+script = ExtResource("21_6xsw8")
 
 [node name="CanvasLayer" parent="." unique_id=882358980 instance=ExtResource("4_8hojv")]
 

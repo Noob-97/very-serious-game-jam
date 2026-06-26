@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dvichygbq7yl1" path="res://Sprites/squareoutline.png" id="12_rrcx7"]
 [ext_resource type="FontFile" uid="uid://dwb0cppillddh" path="res://PixelOperator8-Bold.ttf" id="13_fh7cp"]
 [ext_resource type="PackedScene" uid="uid://dfh7v5qrj2v1l" path="res://Scenes/Popups/POPdvd.tscn" id="14_8e205"]
+[ext_resource type="Script" uid="uid://d17pxawmfscrb" path="res://Scenes/splash.gd" id="19_7v4os"]
 
 [sub_resource type="Environment" id="Environment_fh7cp"]
 background_mode = 3
@@ -49,6 +50,42 @@ shader_parameter/speed = Vector2(-1, 0)
 [sub_resource type="LabelSettings" id="LabelSettings_e0k3n"]
 font = ExtResource("13_fh7cp")
 font_color = Color(5.856372, 5.856372, 5.856372, 0.20784314)
+
+[sub_resource type="Animation" id="Animation_pjscj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_m7n2d"]
+resource_name = "fadeout"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_65hh5"]
+_data = {
+&"RESET": SubResource("Animation_pjscj"),
+&"fadeout": SubResource("Animation_m7n2d")
+}
 
 [node name="Control" type="Control" unique_id=327322054]
 layout_mode = 3
@@ -192,6 +229,15 @@ offset_top = 65.00006
 offset_right = 1189.0
 offset_bottom = 721.00006
 scale = Vector2(0.6694599, 0.7525226)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=769484426]
+layout_mode = 0
+offset_right = 1158.0
+offset_bottom = 648.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect" unique_id=1109373735]
+libraries/ = SubResource("AnimationLibrary_65hh5")
+script = ExtResource("19_7v4os")
 
 [connection signal="pressed" from="TextureRect4/Button" to="." method="start"]
 [connection signal="pressed" from="TextureRect5/Button" to="." method="exit"]

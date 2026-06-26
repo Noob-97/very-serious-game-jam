@@ -86,7 +86,7 @@ func generate_popup():
 
 func _escaped(body: Node2D) -> void:
 	if body.name == "Player":
-		get_tree().change_scene_to_file("res://Scenes/EndingError.tscn")
+		get_tree().call_deferred("change_scene_to_file", "res://Scenes/EndingError.tscn")
 
 func this_player_is_an_idiot():
 	for i in 6:

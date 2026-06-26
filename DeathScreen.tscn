@@ -2,6 +2,93 @@
 
 [ext_resource type="VideoStream" uid="uid://dr1ruutjvqnax" path="res://DeathV1RUS.ogv" id="1_58ct5"]
 [ext_resource type="Script" uid="uid://yb3tlh15og05" path="res://Deathscreen.gd" id="1_80igo"]
+[ext_resource type="AudioStream" uid="uid://d2gvvaxqgp2gd" path="res://Blip12.wav" id="3_0x2kd"]
+[ext_resource type="AudioStream" uid="uid://wo2p088reki3" path="res://riser.mp3" id="4_rxp3u"]
+
+[sub_resource type="Animation" id="Animation_c1xi3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:dialogue_active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_idm0t"]
+resource_name = "dialogue_flag0"
+length = 27.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:dialogue_active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 2.0333333, 2.6666667, 5.5, 6.9333334, 9.666667, 10.233334, 15.533334, 17.066666, 19.5, 21, 24.166666, 24.599997),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false, true, false, true, false]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(12.2, 24.699999),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"play_riser"
+}, {
+"args": [],
+"method": &"play_riser"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_u2w2c"]
+resource_name = "dialogue_flag2"
+length = 4.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:dialogue_active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4.366667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_riser"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c3ygo"]
+_data = {
+&"RESET": SubResource("Animation_c1xi3"),
+&"dialogue_flag0": SubResource("Animation_idm0t"),
+&"dialogue_flag2": SubResource("Animation_u2w2c")
+}
 
 [node name="Control" type="Control" unique_id=1510852049]
 layout_mode = 3
@@ -9,6 +96,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_80igo")
+dialogue_active = true
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1809566392]
 layout_mode = 0
@@ -19,3 +107,12 @@ offset_bottom = 1087.4603
 scale = Vector2(0.65, 0.65)
 stream = ExtResource("1_58ct5")
 autoplay = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1330592383]
+stream = ExtResource("3_0x2kd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=587666697]
+libraries/ = SubResource("AnimationLibrary_c3ygo")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=17371412]
+stream = ExtResource("4_rxp3u")

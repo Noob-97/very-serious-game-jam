@@ -2,6 +2,44 @@
 
 [ext_resource type="Texture2D" uid="uid://b6bmej2ot16ia" path="res://virus_geaam-export.png" id="1_4ri5c"]
 [ext_resource type="Script" uid="uid://qbuo11rvffy3" path="res://timer.gd" id="2_rpxjj"]
+[ext_resource type="Script" uid="uid://d17idbaijr02j" path="res://animation_player.gd" id="3_rpxjj"]
+
+[sub_resource type="Animation" id="Animation_4ri5c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_rpxjj"]
+resource_name = "warning_fade"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6, 3.8000002, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0, 0.5, 1.0, 0.5, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o5o5f"]
+_data = {
+&"RESET": SubResource("Animation_4ri5c"),
+&"warning_fade": SubResource("Animation_rpxjj")
+}
 
 [node name="Control" type="Control" unique_id=629266569]
 layout_mode = 3
@@ -16,6 +54,7 @@ offset_bottom = 650.0
 color = Color(0, 0, 0, 1)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1606851324]
+modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 layout_mode = 0
 offset_left = 201.99998
@@ -42,3 +81,8 @@ texture = ExtResource("1_4ri5c")
 wait_time = 5.0
 autostart = true
 script = ExtResource("2_rpxjj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1806541331]
+libraries/ = SubResource("AnimationLibrary_o5o5f")
+script = ExtResource("3_rpxjj")
+animation_name = "warning_fade"
