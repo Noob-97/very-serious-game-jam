@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cwlih3vjlrci3"]
+
+[ext_resource type="Texture2D" uid="uid://b6bmej2ot16ia" path="res://virus_geaam-export.png" id="1_4ri5c"]
+[ext_resource type="Script" uid="uid://qbuo11rvffy3" path="res://timer.gd" id="2_rpxjj"]
+
+[node name="Control" type="Control" unique_id=629266569]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1606851324]
+texture_filter = 1
+layout_mode = 0
+offset_top = -19.0
+offset_right = 121.0
+offset_bottom = 29.0
+scale = Vector2(9.51, 9.51)
+texture = ExtResource("1_4ri5c")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=844574818]
+z_index = -3
+texture_filter = 1
+layout_mode = 0
+offset_left = -0.99999994
+offset_top = 218.99998
+offset_right = 120.0
+offset_bottom = 267.0
+scale = Vector2(9.51, 9.51)
+texture = ExtResource("1_4ri5c")
+
+[node name="Timer" type="Timer" parent="." unique_id=1999487552]
+wait_time = 5.0
+autostart = true
+script = ExtResource("2_rpxjj")

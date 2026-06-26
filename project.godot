@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="VERY-SERIOUS-GAME-JAM"
-run/main_scene="uid://beu7j3tamk21u"
+run/main_scene="uid://cwlih3vjlrci3"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
