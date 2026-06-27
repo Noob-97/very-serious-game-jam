@@ -21,6 +21,9 @@ var idiot_popup = load("res://Scenes/Popups/POPidiot.tscn")
 var invincible_timer: float = 0.0
 
 func _ready() -> void:
+	if OS.has_feature("web"):
+		AudioServer.set("driver/output_latency", 50)
+	
 	floor_snap_length = 5.0
 	floor_max_angle = deg_to_rad(60.0)
 

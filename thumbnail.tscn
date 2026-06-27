@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://i0orp5lwt5ku"]
+
+[ext_resource type="PackedScene" uid="uid://cato3i0g8w10g" path="res://Scenes/Background.tscn" id="1_t7lj5"]
+[ext_resource type="PackedScene" uid="uid://dkerpte1krpwj" path="res://Scenes/Testing/Wheel5.tscn" id="2_iy3j1"]
+[ext_resource type="PackedScene" uid="uid://b35yxmhicpxuj" path="res://Scenes/Testing/Wheel4.tscn" id="3_55b3p"]
+[ext_resource type="PackedScene" uid="uid://dhwn0tdsp18wy" path="res://Scenes/Testing/Wheel3.tscn" id="4_7ypjd"]
+[ext_resource type="PackedScene" uid="uid://c3j4lpq1cm8qt" path="res://Scenes/Testing/node_2d.tscn" id="5_pt83k"]
+
+[sub_resource type="Environment" id="Environment_vjjch"]
+background_mode = 3
+glow_enabled = true
+glow_bloom = 1.0
+
+[node name="Control" type="Control" unique_id=1951440112]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" parent="." unique_id=882358980 instance=ExtResource("1_t7lj5")]
+
+[node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=854937453]
+modulate = Color(1, 1, 1, 0.52156866)
+position = Vector2(-146, -55)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="CanvasGroup" unique_id=1924715316]
+environment = SubResource("Environment_vjjch")
+
+[node name="wheelofdeath5" parent="CanvasGroup" unique_id=1636137289 instance=ExtResource("2_iy3j1")]
+position = Vector2(726, 374)
+rotation = -1.5707964
+scale = Vector2(15.7, 15.7)
+rotation_speed = 8.0
+
+[node name="wheelofdeath4" parent="CanvasGroup" unique_id=960468907 instance=ExtResource("3_55b3p")]
+position = Vector2(728, 382.99994)
+rotation = -1.5707964
+scale = Vector2(8.8, 8.8)
+rotation_speed = 21.0
+spin_direction = -1
+
+[node name="wheelofdeath3" parent="CanvasGroup" unique_id=122862487 instance=ExtResource("4_7ypjd")]
+position = Vector2(738.99994, 371.99997)
+scale = Vector2(4.7, 4.7)
+rotation_speed = 30.0
+spin_direction = -1
+
+[node name="wheelofdeath2" parent="CanvasGroup" unique_id=1706818833 instance=ExtResource("5_pt83k")]
+position = Vector2(735.0001, 368)
+rotation = -3.1415925
+scale = Vector2(2.4, 2.4)
+rotation_speed = 40.0
+
+[node name="wheelofdeath" parent="CanvasGroup" unique_id=96317900 instance=ExtResource("5_pt83k")]
+position = Vector2(733.0001, 368)
+rotation = 1.5707964
+rotation_speed = 35.0
+spin_direction = -1
